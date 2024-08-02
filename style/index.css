@@ -184,11 +184,11 @@ header div, header p{
         padding: 16px 10px;
     }
     #card-1{
-        right: -4%;
+        right: 0%;
         top: 25%;
     }
     #card-2{
-        left: -4%;
+        left: 0%;
         bottom: 180px;
     }
 }
@@ -245,10 +245,11 @@ header div, header p{
         padding: 35px 0;
     }
        #card-1{
-        right: 10%;
+        top:20%;
+        right:-15%;
     }
     #card-2{
-        left: -35%;
-        bottom: 15%;
+        left: -25%;
+        bottom: 25%;
     }
 }
