@@ -16,6 +16,8 @@ body{
     color: #ffffff;
     font-size: 14px;
     padding-top:20px;
+    position: relative;
+    z-index: -1;
 }
 .display-flex{  
     display: flex;
@@ -56,8 +58,42 @@ body{
     font-weight: 900;
     margin: 14px 0;
 }
-
+/* Live chat */
+#live-chat{
+    position: relative;
+    z-index: 99;
+}
+#live-chat p{
+    position: fixed;
+    bottom: 0;
+    right: 1%;
+    background-color: rgba(0, 100, 67, 0.349);
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+    font-size: 12px;
+}
+#live-chat a{
+    text-decoration: none;
+    color: #ffffff;
+}
+#live-chat a:hover,#live-chat p:hover{
+    color: #000;
+    text-decoration: underline;
+    background-color: rgb(0, 100, 67);
+    font-size: 13px;
+    transition: 0.5s;
+}
 /* navbar style */
+nav{
+    /* background-color: #f5e2e204; */
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 40px;
+    height: 60px;
+    z-index: 98;
+}
 .fitness{
     color:rgba(230, 83, 60, 1) ;
     font-size: 36px;
@@ -70,6 +106,7 @@ nav ul{
     padding: 1px 0px;
     display: inline-block;
     width: max-content;
+    margin-right: 60px;
 }
 nav ul li{
     list-style: none;
@@ -155,24 +192,43 @@ header div, header p{
     top: 10%;
 }
 #card-2{
-    display: inline-block;
+    display: flex;
     /* border: 1px solid; */
-    padding:16px 23px;
+    padding: 0px 10px;
     border-radius: 12px;
     background-color: #a3999929;
     backdrop-filter: blur(5px);
     position: relative;
     left: -20%;
     bottom: 25%;
+    width: max-content;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+#ball{
+    margin: auto 0;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #E6533C;
+    display: block;
+    text-align: center;
+}
+#ball span{
+    margin-top:10px;
 }
 #card-1 h2, #card-2 h2{
     font-size:30px;
     font-weight: 900;
+    line-height: 30px;
 }
 #card-1 p, #card-2 p{
     font-size:13px;
     font-weight: 400;
     padding: 0;
+    line-height: 16px ;
 }
 /* habit section style */
 #habit-images img{
@@ -328,8 +384,8 @@ table td{
 form{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    width: 85%;
     gap: 5px;
+    width: 85%;
 }
 form div:nth-last-child(1){
     grid-column: 1/3;
@@ -412,6 +468,9 @@ footer div a:hover{
     text-decoration: underline;
     color: #ffffff;
 }
+hr{
+    margin: 10px 0;
+}
 footer p{
     padding: 20px 0;
 }
@@ -424,8 +483,11 @@ footer p{
     .tittle{
         font-size: 32px;
     }
-    .menu-bar, #trainings-images-3,#trainings-images-6 , .media-none{
+    .menu-bar, #trainings-images-3,#trainings-images-6 , .media-none, #live-chat{
         display: none;
+    }
+    #nav-icon{
+        margin-right: 50px;
     }
     #header-tittle h1{
         font-size: 36px;
