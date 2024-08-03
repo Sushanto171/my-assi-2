@@ -390,6 +390,31 @@ form div select option{
     padding-left:5px;
     border-radius: 0 8px 8px 0;
 }
+/* footer section style */
+#footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 10px;
+}
+footer h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+footer div a{
+    text-decoration: none;
+    color: #8a8181;
+    font-weight: 400;
+    display: block;
+    padding: 10px;
+}
+footer div a:hover{
+    text-decoration: underline;
+    color: #ffffff;
+}
+footer p{
+    padding: 20px 0;
+}
 /* media query small device*/
 @media screen and (max-width:576px) {
     /* shared style */
@@ -451,6 +476,9 @@ form div select option{
     width: 100%;
     height: auto;
     }
+#footer{
+    grid-template-columns: repeat(1, 1fr);
+}
 }
 /* media query medium device */
 @media screen and (min-width:577px) and (max-width:992px){
@@ -496,12 +524,22 @@ form div select option{
 #bmi-input-section{
     flex-direction: column;
 }
+#footer{
+    grid-template-columns: repeat(2, 1fr);
+}
+#footer div:nth-child(1){
+    grid-column: 1/3;
+}
 }
 /* media query laptop/pc */
 @media screen and (min-width:993px) and (max-width:1440px){
     #nav-icon{
         display: none;
        }
+       .team-images img{
+        width: 100%;
+        height: 230px;
+        }
 }
 /* longer device */
 @media screen and (min-width:1441px) {
