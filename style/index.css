@@ -207,19 +207,77 @@ header div, header p{
     padding: 16px;
     width: 60%;
 }
-
-
+/* trainings section style */
+#trainings-container{
+ grid-template-columns: repeat(3,1fr);
+ margin: 14px auto;
+ margin-right:-4%;
+}
+#trainings-container img{
+    max-width: 100%;
+    height: 100%;
+}
+.train-images{
+    position: relative;
+}
+#trainings-container p{
+    color: #fffefe;
+    position: absolute;
+    left:10%;
+    bottom:10%;
+    font-size: 14px;
+}
+.blank{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.blank-1{
+    background-color: rgba(4, 133, 90, 0.402);
+}
+.blank-2{
+    background-color: rgba(173, 2, 2, 0.317);
+}
+.blank-3,
+.blank-4{
+    background-color: rgba(10, 10, 10, 0.584);
+}
+.blank-5{
+    background-color: rgba(0, 205, 3, 0.256);
+}
+.blank-6{
+    background-color: rgba(132, 113, 239, 0.402);
+}
+.blank:hover{
+    background-color: transparent;
+    transition: 0.5s;
+}
+#trainings-images-1, #trainings-images-3, #trainings-images-5{
+    width:90%;
+}
+#trainings-images-2, #trainings-images-4, #trainings-images-6{
+    width:110%;
+    margin: 0;
+    padding: 0;
+}
+#trainings-images-2,#trainings-images-6{
+    margin-left:-10%;
+}
+#trainings-images-6{
+    max-width: 100%;
+}
 
 /* media query small device*/
 @media screen and (max-width:576px) {
     /* shared style */
     .media-mar{
-        margin: 16px 20px;
+        margin: 25px 20px;
     }
     .tittle{
         font-size: 32px;
     }
-    .menu-bar{
+    .menu-bar, #trainings-images-3,#trainings-images-6{
         display: none;
     }
     #header-tittle h1{
@@ -257,12 +315,19 @@ header div, header p{
     #run-image{
         width: 90%;
     }
+    #trainings-container{
+        grid-template-columns: repeat(2,1fr);
+        margin-right:1px;
+    }
+    #trainings-images-5{
+        width: 100%;
+    }
 }
 /* media query medium device */
 @media screen and (min-width:577px) and (max-width:992px){
     /* shared style */
     .media-mar{
-    margin:20px 30px
+    margin:30px 20px
     }
         /* nav style */
     nav ul li{
@@ -295,6 +360,9 @@ header div, header p{
 }
 #run-image{
     width: 90%;
+}
+#trainings-container{
+    margin-right:3px;
 }
 }
 /* media query laptop/pc */
